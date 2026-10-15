@@ -1,29 +1,36 @@
 import { Link } from "react-router-dom"
 import Card from "../components/Card"
 import { highlights } from "../data/highlights"
+import homeBgImg from "../assets/background home.jpeg"
 
 const Home = () => {
     return (
         <>
-            <section className="relative flex flex-col items-center justify-center text-center min-h-screen px-5 pt-24 bg-linear-180 from-sky-400 to-emerald-900 overflow-hidden">
+            <section
+                className="relative flex flex-col items-center justify-center text-center min-h-screen px-5 pt-24 bg-cover bg-center overflow-hidden"
+                style={{ backgroundImage: `url(${homeBgImg})` }}
+            >
+                <div className="absolute inset-0 bg-black/50" />
                 <div className="absolute inset-0 opacity-20 pointer-events-none">
                     <div className="absolute top-1/4 left-1/4 w-16 h-16 bg-stone-700 animate-pulse" />
                     <div className="absolute top-1/3 right-1/4 w-12 h-12 bg-emerald-600 animate-bounce" />
                     <div className="absolute bottom-1/4 left-1/3 w-20 h-20 bg-sky-600 animate-pulse" style={{ animationDelay: "0.5s" }} />
                 </div>
-                <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight drop-shadow-lg">
+                <div className="relative z-10">
+                    <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight drop-shadow-lg">
                     Membangun Dunia Blok
                 </h1>
                 <p className="mt-4 text-lg md:text-2xl text-white/90 max-w-2xl">
                     Satu petualangan setiap kalinya — server, mod, dan map Minecraft untuk komunitas Anda.
                 </p>
-                <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <Link to="/services" className="px-6 py-3 rounded-lg bg-emerald-500 text-white font-semibold hover:bg-emerald-600 hover:scale-105 transition-all duration-300 shadow-lg">
                         Lihat Layanan
                     </Link>
                     <Link to="/about" className="px-6 py-3 rounded-lg bg-white/80 text-stone-900 font-semibold hover:bg-white hover:scale-105 transition-all duration-300 shadow-lg">
                         Tentang Kami
                     </Link>
+                </div>
                 </div>
             </section>
 

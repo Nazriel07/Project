@@ -1,15 +1,20 @@
 import { Link } from "react-router-dom"
 import { projects } from "../data/portfolio"
+import portoBgImg from "../assets/background portofolio.jpeg"
 import { clients } from "../data/clients"
 import { gallery } from "../data/gallery"
 
 const Porto = () => {
     return (
-        <main className="pt-24 px-5 py-16 min-h-screen bg-linear-180 from-violet-950 to-black text-purple-100">
-            <div className="max-w-6xl mx-auto">
-                <h1 className="text-4xl font-bold text-yellow-300 mb-4">Portofolio & Galeri</h1>
+        <main
+            className="relative pt-24 px-5 py-16 min-h-screen bg-cover bg-center text-purple-100 overflow-hidden"
+            style={{ backgroundImage: `url(${portoBgImg})` }}
+        >
+            <div className="absolute inset-0 bg-violet-950/65" />
+            <div className="relative z-10 max-w-6xl mx-auto">
+                <h1 className="text-4xl font-bold text-yellow-200 mb-4">Portofolio & Galeri</h1>
                 <p className="text-purple-200/80 mb-12 max-w-2xl">
-                    Contoh proyek, daftar klien, dan dokumentasi kegiatan kami.
+                    Contoh proyek, daftar klien, dan dokumentasi kegiatan kami. Gambar proyek diambil dari folder assets.
                 </p>
 
                                 <section className="mb-16">

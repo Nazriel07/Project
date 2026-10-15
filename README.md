@@ -19,10 +19,11 @@ menggunakan React Router.
 - Kontak: form kontak (nama, email, pesan) dengan validasi sederhana, alamat, info kontak & media sosial
 
 ## Teknologi
-- React 19 + Vite 8
-- Tailwind CSS (via CDN browser)
-- React Router DOM 7
-- JavaScript (ES Modules)
+- **React 19** — library untuk membangun UI berbasis komponen.
+- **Vite 8** — build tool dan dev server yang cepat.
+- **Tailwind CSS (via CDN browser)** — styling dengan utility classes.
+- **React Router DOM 7** — routing antarhalaman di sisi client.
+- **JavaScript (ES Modules)** — sistem modul bawaan JavaScript (sintaks `import`/`export`) untuk memecah kode menjadi file terpisah yang dapat digunakan ulang. Digunakan di seluruh folder `src/` (misal `import { services } from "../data/services"`, `export default Home`) dan di `main.jsx`/`App.jsx`. Project juga bertipe ESM (`"type": "module"` di `package.json`).
 
 ## Struktur Folder
 ```
