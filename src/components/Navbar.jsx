@@ -20,11 +20,11 @@ const Navbar = () => {
     return (
         <nav
             style={{ fontFamily: '"Press Start 2P", monospace' }}
-            className="absolute w-full bg-black/30 backdrop-blur-md text-white z-50 text-sm"
+            className="fixed top-0 left-0 w-full bg-black/30 backdrop-blur-md text-white z-50 text-sm"
         >
             <div className="flex items-center justify-between px-4 sm:px-6 py-4">
                 <Link to="/" className="text-base font-bold text-red-600 hover:text-red-500 transition-colors">
-                    MOJANG
+                    CRAFTVERSE
                 </Link>
 
                 <button

@@ -34,7 +34,7 @@ const Home = () => {
                 </div>
             </section>
 
-                        <section className="py-16 px-5 bg-white">
+                        <section className="py-16 px-5 bg-sky-100">
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="text-3xl font-bold text-stone-900 mb-4">Sekilas Craftverse</h2>
                     <p className="text-lg text-stone-700 leading-relaxed">
@@ -48,14 +48,16 @@ const Home = () => {
                 </div>
             </section>
 
-                        <section className="py-20 px-5 bg-stone-100">
+                        <section className="py-20 px-5 bg-emerald-50">
                 <div className="max-w-6xl mx-auto">
                     <h2 className="text-3xl font-bold text-stone-900 text-center mb-12">Layanan Unggulan</h2>
                     <div className="grid md:grid-cols-3 gap-8">
-                        {highlights.map((f) => (
+                        {highlights.map((f) => {
+                            const bgLight = f.accent === "bg-emerald-500" ? "bg-emerald-100" : f.accent === "bg-orange-500" ? "bg-orange-100" : "bg-sky-100"
+                            return (
                             <Card
                                 key={f.title}
-                                className="group hover:shadow-2xl hover:-translate-y-2 cursor-pointer"
+                                className={`group hover:shadow-2xl hover:-translate-y-2 cursor-pointer !${bgLight}`}
                             >
                                 <div className={`w-14 h-14 rounded-lg ${f.accent} mb-4 flex items-center justify-center text-2xl group-hover:rotate-6 transition-transform duration-300`}>
                                     {f.icon}
@@ -63,7 +65,8 @@ const Home = () => {
                                 <h3 className="text-xl font-semibold text-stone-900 mb-2 group-hover:text-emerald-600 transition-colors">{f.title}</h3>
                                 <p className="text-stone-600">{f.desc}</p>
                             </Card>
-                        ))}
+                            )
+                        })}
                     </div>
                     <div className="text-center mt-10">
                         <Link to="/services" className="inline-block px-6 py-3 rounded-lg bg-emerald-500 text-white font-semibold hover:bg-emerald-600 hover:scale-105 transition-all duration-300 shadow-lg">
