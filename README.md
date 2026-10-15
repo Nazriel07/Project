@@ -1,24 +1,64 @@
-<<<<<<< HEAD
-# Project
-Project Promnet1
-=======
-# React + Vite
+# Project Promnet1 — Website Perusahaan Game Minecraft (Craftverse)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Identitas
+- **Nama** : Muhaamd Nazrel Purkon
+- **NIM**  : 2510755
+- **Kelas** : 3C
 
-Currently, two official plugins are available:
+## Deskripsi Singkat
+Website company profile untuk studio game Minecraft bernama Craftverse. Menyediakan layanan
+seperti server hosting, pengembangan mod/plugin, custom map, texture & skin, setup Realm, serta
+event dan turnamen. Website dibangun dengan React + Vite, styling Tailwind CSS, dan navigasi
+menggunakan React Router.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Fitur
+- Beranda: hero section, ringkasan perusahaan, highlight layanan unggulan
+- Tentang Kami: sejarah singkat, visi & misi, profil tim
+- Layanan: daftar layanan beserta deskripsi
+- Portofolio: contoh proyek, daftar klien, dokumentasi kegiatan
+- Kontak: form kontak (nama, email, pesan) dengan validasi sederhana, alamat, info kontak & media sosial
 
-## React Compiler
+## Teknologi
+- React 19 + Vite 8
+- Tailwind CSS (via CDN browser)
+- React Router DOM 7
+- JavaScript (ES Modules)
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Struktur Folder
+```
+src/
+  components/   (Navbar, Footer, Card)
+  data/         (highlights, services, team, portfolio, clients, gallery)
+  page/         (home, about, services, porto, contact, layout)
+  App.jsx
+  main.jsx
+```
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+## Cara Menjalankan Project
+```bash
+npm install
+npm run dev
+```
+Buka `http://localhost:5173` di browser.
 
-## Expanding the ESLint configuration
+Build production:
+```bash
+npm run build
+npm run preview
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
->>>>>>> aba883a (Day-1)
+## Screenshot Halaman
+
+### Beranda (Home)
+
+
+### Tentang Kami (About)
+
+
+### Layanan (Services)
+
+
+### Portofolio (Portfolio)
+
+
+### Kontak (Contact)

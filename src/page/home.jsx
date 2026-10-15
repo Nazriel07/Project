@@ -1,10 +1,6 @@
 import { Link } from "react-router-dom"
-
-const features = [
-    { title: "Server Minecraft", desc: "Host server performa tinggi untuk komunitas Anda.", accent: "bg-emerald-500", icon: "🖥️" },
-    { title: "Mod & Plugin", desc: "Pengembangan mod/plugin kustom sesuai kebutuhan gameplay.", accent: "bg-orange-500", icon: "⚙️" },
-    { title: "Custom Map", desc: "Bangun dunia & map unik dengan redstone & terrain kustom.", accent: "bg-sky-500", icon: "🗺️" },
-]
+import Card from "../components/Card"
+import { highlights } from "../data/highlights"
 
 const Home = () => {
     return (
@@ -25,28 +21,47 @@ const Home = () => {
                     <Link to="/services" className="px-6 py-3 rounded-lg bg-emerald-500 text-white font-semibold hover:bg-emerald-600 hover:scale-105 transition-all duration-300 shadow-lg">
                         Lihat Layanan
                     </Link>
-                    <Link to="/contact" className="px-6 py-3 rounded-lg bg-white/80 text-stone-900 font-semibold hover:bg-white hover:scale-105 transition-all duration-300 shadow-lg">
-                        Hubungi Kami
+                    <Link to="/about" className="px-6 py-3 rounded-lg bg-white/80 text-stone-900 font-semibold hover:bg-white hover:scale-105 transition-all duration-300 shadow-lg">
+                        Tentang Kami
                     </Link>
                 </div>
             </section>
 
-            <section className="py-20 px-5 bg-stone-100">
+                        <section className="py-16 px-5 bg-white">
+                <div className="max-w-4xl mx-auto text-center">
+                    <h2 className="text-3xl font-bold text-stone-900 mb-4">Sekilas Craftverse</h2>
+                    <p className="text-lg text-stone-700 leading-relaxed">
+                        Craftverse adalah studio kreatif Minecraft yang membantu komunitas, streamer, dan klan
+                        membangun pengalaman bermain terbaik — mulai dari server hosting hingga mod, map kustom,
+                        dan event komunitas. Kami fokus pada performa, keamanan, dan keseruan bermain.
+                    </p>
+                    <Link to="/about" className="inline-block mt-6 text-emerald-600 font-semibold hover:underline">
+                        Pelajari lebih lanjut →
+                    </Link>
+                </div>
+            </section>
+
+                        <section className="py-20 px-5 bg-stone-100">
                 <div className="max-w-6xl mx-auto">
-                    <h2 className="text-3xl font-bold text-stone-900 text-center mb-12">Apa yang Kami Tawarkan?</h2>
+                    <h2 className="text-3xl font-bold text-stone-900 text-center mb-12">Layanan Unggulan</h2>
                     <div className="grid md:grid-cols-3 gap-8">
-                        {features.map((f) => (
-                            <div
+                        {highlights.map((f) => (
+                            <Card
                                 key={f.title}
-                                className="group bg-white rounded-2xl p-6 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer"
+                                className="group hover:shadow-2xl hover:-translate-y-2 cursor-pointer"
                             >
                                 <div className={`w-14 h-14 rounded-lg ${f.accent} mb-4 flex items-center justify-center text-2xl group-hover:rotate-6 transition-transform duration-300`}>
                                     {f.icon}
                                 </div>
                                 <h3 className="text-xl font-semibold text-stone-900 mb-2 group-hover:text-emerald-600 transition-colors">{f.title}</h3>
                                 <p className="text-stone-600">{f.desc}</p>
-                            </div>
+                            </Card>
                         ))}
+                    </div>
+                    <div className="text-center mt-10">
+                        <Link to="/services" className="inline-block px-6 py-3 rounded-lg bg-emerald-500 text-white font-semibold hover:bg-emerald-600 hover:scale-105 transition-all duration-300 shadow-lg">
+                            Lihat Semua Layanan
+                        </Link>
                     </div>
                 </div>
             </section>
