@@ -51,6 +51,7 @@ npm run preview
 ## Screenshot Halaman
 
 ### Beranda (Home)
+<img width="1890" height="1064" alt="image" src="https://github.com/user-attachments/assets/f9989a99-86fd-4440-825e-165d92b45267" />
 
 
 ### Tentang Kami (About)
