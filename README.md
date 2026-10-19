@@ -52,15 +52,21 @@ npm run preview
 
 ### Beranda (Home)
 
-
+![Home 1](src/assets/ss%20page/Home%231.png)
+![Home 2](src/assets/ss%20page/Home%232.png)
 
 ### Tentang Kami (About)
 
+![About](src/assets/ss%20page/About.png)
 
 ### Layanan (Services)
 
+![Services](src/assets/ss%20page/Services.png)
 
 ### Portofolio (Portfolio)
 
+![Portfolio](src/assets/ss%20page/Portofolio.png)
 
 ### Kontak (Contact)
+
+![Contact](src/assets/ss%20page/Contact.png)
